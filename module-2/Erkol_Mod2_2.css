@@ -1,0 +1,60 @@
+/* Global font settings */
+html, body {
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Paragraph styling */
+p {
+    font-weight: 400;
+    line-height: 1.4em;
+}
+
+/* H1 styling */
+h1 {
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+/* H2 styling */
+h2 {
+    font-weight: 500;
+    text-align: left;
+    padding-top: 15px;
+}
+
+/* Intro paragraph */
+.intro {
+    text-indent: 2em;
+}
+
+/* Sentence span styling */
+.sentence {
+    font-style: italic;
+}
+
+/* Address block */
+address {
+    text-align: center;
+    font-style: normal;
+}
+
+/* Website link styling */
+a {
+    font-weight: bold;
+    font-size: 1.25em;
+    color: #4F3674;
+    text-decoration: none;
+}
+
+/* Visited link */
+a:visited {
+    color: #6b4aa3;
+}
+
+/* Hover link */
+a:hover {
+    text-decoration: underline;
+    background-color: #D6A800;
+}
