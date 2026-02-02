@@ -1,0 +1,50 @@
+/*
+  CSD 340 Web Development with HTML and CSS
+  Assignment 4.2: Build a Web Page Exercise - Part 4
+  Mirach Erkol
+  Date: 02/01/2026
+*/
+
+/* CSS grid layout for three side-by-side gallery items */
+#image-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 10%;
+    gap: 20px;
+}
+
+/* Grid lines around each gallery item */
+.gallery-item {
+    border: 2px solid purple;
+    padding: 10px;
+}
+
+/* Center the main assignment title and make it purple */
+h1 {
+    text-align: center;
+    color: purple;
+}
+
+/* Center gallery item titles with a soft purple color */
+h3 {
+    text-align: center;
+    color: rgba(120, 60, 160, 1);
+}
+
+/* Center images within each gallery item */
+figure {
+    text-align: center;
+}
+
+/* Ensure images scale properly within grid columns */
+figure img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Italicized author captions with smaller font size */
+figcaption {
+    font-style: italic;
+    font-size: 0.75em;
+    color: rgba(90, 0, 130, 1);
+}
