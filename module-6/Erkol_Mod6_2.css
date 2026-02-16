@@ -1,0 +1,90 @@
+/* Header Styling */
+header {
+    background-color: #4b2e83; /* Purple */
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-weight: 400;
+}
+
+/* Navbar Styling */
+#navbar {
+    overflow: hidden;
+    background-color: #4b2e83; /* Same purple */
+    border-bottom: solid 15px #f4b400; /* Gold */
+}
+
+#navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+#navbar a:hover {
+    background-color: #f4b400; /* Gold */
+    color: #4b2e83; /* Purple text on hover */
+}
+
+/* Container */
+#container {
+    margin-top: 2%;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding: 10px;
+}
+
+/* Card Styling */
+.card {
+    width: 50%;
+    margin: 0 auto; /* Centers the card */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.card-title {
+    text-align: center;
+    font-size: 2em;
+    color: #4b2e83; /* Purple */
+    font-weight: 400;
+    padding-top: 10px;
+}
+
+.card-content {
+    padding: 2px 16px 20px 16px;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #4b2e83; /* Purple */
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    border-top: solid 5px #f4b400; /* Gold accent */
+}
+
+footer p {
+    color: white;
+    font-weight: 400;
+    float: right;
+    padding-right: 10px;
+    font-style: italic;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
