@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Assignment 9.3 JavaScript Part 1">
+    <meta name="keywords" content="CSD 340, JavaScript, HTML">
+    <meta name="author" content="Mirach Erkol">
+
+    <title>CSD 340 Web Development with HTML and CSS</title>
+
+    <link rel="stylesheet" href="../site.css">
+
+<script>
+    var word1 = "Earth";
+    var word2 = "quantum";
+    var word3 = "Sirius";
+    var word4 = "destiny";
+
+    function replaceWord(id, value) {
+        document.getElementById(id).innerHTML = value;
+    }
+</script>
+</head>
+
+<body>
+<div id="container">
+
+    <h1>Assignment 9.3: JavaScript - Part 1</h1>
+
+<p>
+    In the year 2147, humanity prepared for its first mission beyond 
+    <span id="blank1">__________</span>.
+</p>
+
+<p>
+    The crew boarded the starship powered by a revolutionary 
+    <span id="blank2">__________</span> engine.
+</p>
+
+<p>
+    Their destination was a distant planet orbiting the star 
+    <span id="blank3">__________</span>, glowing brightly in deep space.
+</p>
+
+<p>
+    As they launched, the commander whispered, 
+    "For all mankind, we explore the unknown and chase 
+    <span id="blank4">__________</span>."
+</p>
+
+    <br>
+
+    <button type="button" onclick="replaceWord('blank1', word1)">Reveal Word 1</button>
+    <button type="button" onclick="replaceWord('blank2', word2)">Reveal Word 2</button>
+    <button type="button" onclick="replaceWord('blank3', word3)">Reveal Word 3</button>
+    <button type="button" onclick="replaceWord('blank4', word4)">Reveal Word 4</button>
+
+</div>
+</body>
+</html>
+
