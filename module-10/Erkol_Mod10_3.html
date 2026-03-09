@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Assignment 10.3 JavaScript Part 2">
+<meta name="keywords" content="CSD 340, JavaScript, HTML">
+<meta name="author" content="Mirach Erkol">
+
+<title>CSD 340 Web Development with HTML and CSS</title>
+
+<style>
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+        background-color: #f4f8f4;
+        margin: 30px;
+    }
+
+    h1 {
+        color: #1b4332;
+    }
+
+    .instructions {
+        font-size: 1.3em;
+        font-weight: bold;
+        color: white;
+        background-color: #2d6a4f;
+        display: inline-block;
+        padding: 12px 20px;
+        border-radius: 8px;
+        margin-bottom: 30px;
+    }
+
+    img {
+        width: 400px;
+        cursor: pointer;
+        border: 3px solid #2d6a4f;
+        border-radius: 8px;
+    }
+
+    .source {
+        margin-top: 10px;
+        margin-bottom: 40px;
+        font-size: 0.95em;
+    }
+
+    .source a {
+        color: #1d3557;
+    }
+</style>
+
+<script>
+    function toggleForest() {
+        var img = document.getElementById("forest");
+
+        if (img.src.indexOf("Deforestation%20Before.png") !== -1 || img.src.indexOf("Deforestation Before.png") !== -1) {
+            img.src = "Deforestation After.png";
+        } else {
+            img.src = "Deforestation Before.png";
+        }
+    }
+
+    function toggleOcean() {
+        var img = document.getElementById("ocean");
+
+        if (img.src.indexOf("Pollution%20Before.png") !== -1 || img.src.indexOf("Pollution Before.png") !== -1) {
+            img.src = "Pollution After.png";
+        } else {
+            img.src = "Pollution Before.png";
+        }
+    }
+</script>
+
+</head>
+<body>
+
+<h1>Assignment 10.3: JavaScript - Part 2</h1>
+
+<p class="instructions">Click the images to see environmental changes.</p>
+
+<div>
+    <img id="forest" src="Deforestation Before.png" alt="Deforestation example" onclick="toggleForest()">
+
+    <p class="source">
+        Image Source:
+        <a href="https://animalia-life.club/qa/pictures/rainforest-deforestation-before-and-after" target="_blank">
+            Rainforest Deforestation Before and After
+        </a>
+    </p>
+</div>
+
+<div>
+    <img id="ocean" src="Pollution Before.png" alt="Ocean pollution example" onclick="toggleOcean()">
+
+    <p class="source">
+        Image Source:
+        <a href="https://stock.adobe.com/ge/images/ocean-pollution-a-before-after-comparison-revealing-the-impact-of-plastic-waste-on-marine-life/1543138534" target="_blank">
+            Ocean Pollution Before and After Comparison
+        </a>
+    </p>
+</div>
+
+</body>
+</html>
