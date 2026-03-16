@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Assignment 11.2 JavaScript Part 3">
+<meta name="keywords" content="CSD 340, JavaScript, To Do List">
+<meta name="author" content="Mirach Erkol">
+
+<title>CSD 340 Web Development with HTML and CSS</title>
+
+<style>
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    background-color: #f4f8f4;
+    margin: 30px;
+}
+
+h1 {
+    color: #1b4332;
+}
+
+.instructions {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+input, select {
+    padding: 10px;
+    width: 250px;
+    margin-bottom: 15px;
+}
+
+button {
+    padding: 10px 15px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+
+.addBtn {
+    background-color: green;
+}
+
+.deleteBtn {
+    background-color: red;
+}
+
+.sortBtn {
+    background-color: blue;
+}
+
+#displayList {
+    margin-top: 25px;
+    font-size: 1.2em;
+}
+
+</style>
+
+<script>
+
+let todoArray = [];
+
+function addItem() {
+
+    let task = document.getElementById("taskInput").value;
+
+    if (task === "") {
+        alert("Please enter a task.");
+        return;
+    }
+
+    todoArray.push(task);
+
+    alert("Item: " + task + " Added as item " + todoArray.length);
+
+    document.getElementById("taskInput").value = "";
+
+    displayItems();
+}
+
+function deleteLast() {
+
+    if (todoArray.length === 0) {
+        alert("No items to delete.");
+        return;
+    }
+
+    let removed = todoArray.pop();
+
+    alert("Deleted item: " + removed);
+
+    displayItems();
+}
+
+function deleteSelected() {
+
+    let select = document.getElementById("deleteSelect");
+
+    if (select.selectedIndex === 0) {
+        alert("Please select an item to delete.");
+        return;
+    }
+
+    let index = select.selectedIndex - 1;
+
+    let removed = todoArray.splice(index, 1);
+
+    alert("Deleted item: " + removed);
+
+    displayItems();
+}
+
+function sortItems() {
+
+    if (todoArray.length === 0) {
+        alert("No items to sort.");
+        return;
+    }
+
+    todoArray.sort();
+
+    alert("The list has been sorted.");
+
+    displayItems();
+}
+
+function displayItems() {
+
+    let output = "<h3>To Do List:</h3>";
+
+    let select = document.getElementById("deleteSelect");
+
+    select.innerHTML = '<option>-- Select item to delete --</option>';
+
+    for (let i = 0; i < todoArray.length; i++) {
+
+        output += (i + 1) + ". " + todoArray[i] + "<br>";
+
+        let option = document.createElement("option");
+        option.text = todoArray[i];
+
+        select.add(option);
+    }
+
+    document.getElementById("displayList").innerHTML = output;
+}
+
+</script>
+
+</head>
+
+<body>
+
+<h1>Assignment 11.2: JavaScript - Part 3</h1>
+
+<p class="instructions">
+Enter a task below and click Add to save it.
+Use Delete Last Entry to remove the most recent item.
+Use Delete Selected Item to remove a specific task.
+Use Sort to organize the list.
+</p>
+
+<input type="text" id="taskInput" placeholder="Enter a task">
+
+<br>
+
+<select id="deleteSelect">
+<option>-- Select item to delete --</option>
+</select>
+
+<br>
+
+<button class="addBtn" onclick="addItem()">Add</button>
+
+<button class="deleteBtn" onclick="deleteLast()">Delete Last Entry</button>
+
+<button class="deleteBtn" onclick="deleteSelected()">Delete Selected Item</button>
+
+<button class="sortBtn" onclick="sortItems()">Sort</button>
+
+<div id="displayList"></div>
+
+</body>
+
+</html>
